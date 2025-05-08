@@ -1,6 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import LeverageHome from './LeverageHome';
+import App from './App';
+import './App.css';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(<React.StrictMode><LeverageHome /></React.StrictMode>);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
