@@ -1,0 +1,75 @@
+:root {
+  --primary-color: #c53030;
+  --background-color: #f7fafc;
+  --text-color: #1a202c;
+  --button-bg: #c53030;
+  --button-text: white;
+  --card-bg: white;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  background-color: #fff;
+  position: sticky;
+  top: 0;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+nav a {
+  margin-left: 1rem;
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.hero {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: linear-gradient(to right, #fee2e2, #fecaca);
+}
+
+.features, .how-it-works, .cta, .contact {
+  padding: 3rem 2rem;
+  max-width: 960px;
+  margin: auto;
+}
+
+.feature-grid {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.card {
+  background: var(--card-bg);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  flex: 1;
+  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+}
+
+.cta-button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.75rem 1.5rem;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+footer {
+  text-align: center;
+  padding: 2rem;
+  background-color: #f3f4f6;
+  font-size: 0.875rem;
+}
