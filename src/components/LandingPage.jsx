@@ -5,8 +5,9 @@ function LandingPage() {
   return (
     <div>
       <header>
-        <div className="logo-container">
-          <img src={logo} alt="Leverage AI Logo" />
+       <div className="header-content">
+  <img src="/leverage_ai_logo.png" alt="Leverage AI Logo" className="logo" />
+
           <span>LEVERAGE AI</span>
         </div>
         <nav>
