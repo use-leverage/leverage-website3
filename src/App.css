@@ -32,8 +32,6 @@ body {
   color: #e0e0e0; /* Light gray for text */
 }
 
-}
-
 header {
   display: flex;
   justify-content: space-between;
