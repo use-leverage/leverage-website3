@@ -1,10 +1,16 @@
 :root {
-  --primary-color: #c53030;
-  --background-color: #f7fafc;
-  --text-color: #1a202c;
-  --button-bg: #c53030;
-  --button-text: white;
-  --card-bg: white;
+  --primary-blue: #007bff; /* Vibrant blue from logo */
+  --primary-green: #2ecc71; /* Vibrant green from logo */
+  --background-dark: #1a202c; /* Dark background from logo */
+  --text-light: #f7fafc; /* Light text for contrast */
+  --card-dark: #2d3748; /* Slightly lighter dark for cards */
+
+  --primary-color: var(--primary-blue); /* Default primary color */
+  --background-color: var(--background-dark);
+  --text-color: var(--text-light);
+  --button-bg: var(--primary-blue);
+  --button-text: var(--text-light);
+  --card-bg: var(--card-dark);
 }
 
 body {
@@ -17,11 +23,28 @@ body {
 header {
   display: flex;
   justify-content: space-between;
+  align-items: center; /* Align items vertically */
   padding: 1rem 2rem;
-  background-color: #fff;
+  background-color: var(--card-dark); /* Use a dark shade for header background */
   position: sticky;
   top: 0;
-  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  box-shadow: 0 1px 3px rgba(0,0,0,0.3);
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+}
+
+.logo-container img {
+  height: 40px; /* Adjust logo size as needed */
+  margin-right: 10px;
+}
+
+.logo-container span {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-light);
 }
 
 nav a {
@@ -34,7 +57,8 @@ nav a {
 .hero {
   text-align: center;
   padding: 4rem 2rem;
-  background: linear-gradient(to right, #fee2e2, #fecaca);
+  background: linear-gradient(to right, var(--primary-blue), var(--primary-green)); /* Gradient background */
+  color: var(--text-light); /* Light text on gradient */
 }
 
 .features, .how-it-works, .cta, .contact {
@@ -54,7 +78,7 @@ nav a {
   padding: 1rem;
   border-radius: 0.5rem;
   flex: 1;
-  box-shadow: 0 0 5px rgba(0,0,0,0.05);
+  box-shadow: 0 0 5px rgba(0,0,0,0.2);
 }
 
 .cta-button {
@@ -70,6 +94,9 @@ nav a {
 footer {
   text-align: center;
   padding: 2rem;
-  background-color: #f3f4f6;
+  background-color: var(--card-dark); /* Use dark shade for footer */
+  color: var(--text-light);
   font-size: 0.875rem;
 }
+
+
