@@ -1,3 +1,15 @@
+.logo {
+  height: 60px; /* Adjust as needed */
+  margin-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .logo {
+    height: 40px; /* Adjust for smaller screens */
+    margin-right: 10px;
+  }
+}
+
 :root {
   --primary-blue: #007bff; /* Vibrant blue from logo */
   --primary-green: #2ecc71; /* Vibrant green from logo */
@@ -16,8 +28,10 @@
 body {
   margin: 0;
   font-family: 'Segoe UI', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
+  background-color: #1a1a2e; /* Dark blue/purple */
+  color: #e0e0e0; /* Light gray for text */
+}
+
 }
 
 header {
@@ -25,7 +39,9 @@ header {
   justify-content: space-between;
   align-items: center; /* Align items vertically */
   padding: 1rem 2rem;
-  background-color: var(--card-dark); /* Use a dark shade for header background */
+  background-color: #16213e; /* Slightly lighter dark blue */
+}
+/* Use a dark shade for header background */
   position: sticky;
   top: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -73,8 +89,11 @@ nav a {
   margin-top: 2rem;
 }
 
-.card {
-  background: var(--card-bg);
+  .card, .section {
+  background-color: #2e3a59; /* A medium dark blue */
+  color: #e0e0e0;
+}
+
   padding: 1rem;
   border-radius: 0.5rem;
   flex: 1;
@@ -82,13 +101,28 @@ nav a {
 }
 
 .cta-button {
-  background-color: var(--button-bg);
-  color: var(--button-text);
+  background-color: #0f3460; /* A deeper blue */
+  color: white;
+  border: none;
+}
+
+.button:hover {
+  background-color: #0a2342; /* Darker on hover */
+}
+
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
+}
+a {
+  color: #e94560; /* A vibrant red/pink for links */
+}
+
+/* You might have other accent elements, adjust their colors as needed */
+.accent-text {
+  color: #e94560;
 }
 
 footer {
