@@ -1,7 +1,20 @@
-import React from 'react';
+import React, { useState } from 'react';
+import ContactForm from './ContactForm';
 import logo from '../assets/leverage_ai_logo.png'; // Import the logo image
 
 function LandingPage() {
+  const [isContactFormOpen, setIsContactFormOpen] = useState(false);
+
+  const handleContactClick = (e) => {
+    e.preventDefault();
+    setIsContactFormOpen(true);
+  };
+
+  const handleScheduleConsultation = () => {
+    // Opens Calendly scheduling page in a new tab
+    window.open('https://calendly.com/use-leverage-ai/30min', '_blank');
+  };
+
   return (
     <div>
       <header>
@@ -13,7 +26,7 @@ function LandingPage() {
         <nav>
           <a href="#features">Features</a>
           <a href="#how-it-works">How It Works</a>
-          <a href="#contact">Contact</a>
+          <a href="#contact" onClick={handleContactClick}>Contact</a>
           <a href="/demo">Demo</a>
         </nav>
       </header>
@@ -50,7 +63,7 @@ function LandingPage() {
       <section className="cta">
         <h2>Ready to Transform Your Business?</h2>
         <p>Say goodbye to outdated systems and hello to the future of enterprise efficiency.</p>
-        <a href="#contact" className="cta-button">Get a Free Consultation</a>
+        <button onClick={handleScheduleConsultation} className="cta-button">Get a Free Consultation</button>
       </section>
 
       <section id="contact" className="contact">
@@ -62,6 +75,11 @@ function LandingPage() {
       <footer>
         <p>&copy; 2025 Leverage AI. All rights reserved.</p>
       </footer>
+
+      <ContactForm 
+        isOpen={isContactFormOpen} 
+        onClose={() => setIsContactFormOpen(false)} 
+      />
     </div>
   );
 }
