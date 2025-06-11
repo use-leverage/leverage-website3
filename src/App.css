@@ -38,8 +38,7 @@ header {
   align-items: center; /* Align items vertically */
   padding: 1rem 2rem;
   background-color: #16213e; /* Slightly lighter dark blue */
-}
-/* Use a dark shade for header background */
+  /* Use a dark shade for header background */
   position: sticky;
   top: 0;
   box-shadow: 0 1px 3px rgba(0,0,0,0.3);
@@ -87,11 +86,9 @@ nav a {
   margin-top: 2rem;
 }
 
-  .card, .section {
+.card, .section {
   background-color: #2e3a59; /* A medium dark blue */
   color: #e0e0e0;
-}
-
   padding: 1rem;
   border-radius: 0.5rem;
   flex: 1;
@@ -102,18 +99,17 @@ nav a {
   background-color: #0f3460; /* A deeper blue */
   color: white;
   border: none;
-}
-
-.button:hover {
-  background-color: #0a2342; /* Darker on hover */
-}
-
   padding: 0.75rem 1.5rem;
   border-radius: 0.5rem;
   text-decoration: none;
   display: inline-block;
   margin-top: 1rem;
 }
+
+.button:hover {
+  background-color: #0a2342; /* Darker on hover */
+}
+
 a {
   color: #e94560; /* A vibrant red/pink for links */
 }
@@ -130,5 +126,4 @@ footer {
   color: var(--text-light);
   font-size: 0.875rem;
 }
-
 
